@@ -14,5 +14,5 @@ RUN dnf clean all
 COPY requirements.yml /tmp/requirements.yml
 COPY requirements.txt /tmp/requirements.txt
 RUN ansible-galaxy collection install -r /tmp/requirements.yml
-RUN pip install -r requirements.txt
+RUN pip install -r /tmp/requirements.txt
 USER 1000
