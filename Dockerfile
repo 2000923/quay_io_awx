@@ -11,6 +11,10 @@ USER root
 RUN dnf install -y jq
 RUN dnf clean all
 
+# Instalar MinIO Client (mc)
+RUN curl -L https://dl.min.io/client/mc/release/linux-amd64/mc -o /usr/local/bin/mc \
+    && chmod +x /usr/local/bin/mc
+
 COPY requirements.yml /tmp/requirements.yml
 COPY requirements.txt /tmp/requirements.txt
 RUN ansible-galaxy collection install -r /tmp/requirements.yml
