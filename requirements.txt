@@ -1,5 +1,8 @@
 # requirements.txt
-jmespath==0.10.0
-selinux==0.2.1
-pyvmomi==8.0.3.0.1
-requests==2.32.3
+jmespath
+selinux
+pyvmomi
+requests
+pyVmomi>=8.0.3.0.1
+vmware-vcenter
+vmware-vapi-common-client
