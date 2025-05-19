@@ -19,6 +19,11 @@ RUN pip install --upgrade ansible-core
 
 COPY requirements.yml /tmp/requirements.yml
 COPY requirements.txt /tmp/requirements.txt
-RUN ansible-galaxy collection install -r /tmp/requirements.yml
+# ← aquí instalamos en el path global
+RUN ansible-galaxy collection install \
+      -p /usr/share/ansible/collections \
+      -r /tmp/requirements.yml
 RUN pip install -r /tmp/requirements.txt
+# Asegurar que el usuario ansible (UID 1000) puede leer las colecciones
+RUN chown -R 1000:0 /usr/share/ansible/collections
 USER 1000
