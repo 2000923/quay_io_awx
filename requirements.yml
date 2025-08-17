@@ -5,3 +5,4 @@ collections:
     version: '>=9.0.0'
   - name: community.windows
   - name: ibm.power_hmc
+  - name: awx.awx
