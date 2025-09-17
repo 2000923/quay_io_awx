@@ -8,3 +8,4 @@ collections:
   - name: awx.awx
   - name: community.mysql
     version: ">=3.15.0"
+  - name: community.windows
