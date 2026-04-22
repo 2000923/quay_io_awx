@@ -8,3 +8,6 @@ vmware-vcenter
 vmware-vapi-common-client
 dnspython
 PyMySQL
+netaddr
+pywinrm
+pypsrp
